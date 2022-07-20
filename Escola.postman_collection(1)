@@ -1,0 +1,212 @@
+{
+	"info": {
+		"_postman_id": "e6dc4a88-e044-4856-8c5d-ac3f6308f9b4",
+		"name": "Escola",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21266970"
+	},
+	"item": [
+		{
+			"name": "Alunos",
+			"item": [
+				{
+					"name": "ListAluno",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7161/api/Alunos",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7161",
+							"path": [
+								"api",
+								"Alunos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AlunoId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7161/api/Alunos?Id=1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7161",
+							"path": [
+								"api",
+								"Alunos"
+							],
+							"query": [
+								{
+									"key": "Id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddAluno",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n\"Id\": 1,\r\n\"Nome\": \"Carol\",\r\n\"Sobrenome\": \"Cagnoni\",\r\n\"Curso\": \"CSharp\"\r\n} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7161/api/Alunos",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7161",
+							"path": [
+								"api",
+								"Alunos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteAluno",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7161/api/Alunos/id=1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7161",
+							"path": [
+								"api",
+								"Alunos",
+								"id=1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cursos",
+			"item": [
+				{
+					"name": "ListCursos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7161/api/Cursos",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7161",
+							"path": [
+								"api",
+								"Cursos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CursoId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7161/api/cursos?id=1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7161",
+							"path": [
+								"api",
+								"cursos"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteCurso",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7161/api/Cursos/id=1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7161",
+							"path": [
+								"api",
+								"Cursos",
+								"id=1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddCurso",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"Curso\":{\r\n\"Id\":2,\r\n\"Nome\":\"CSharp\",\r\n\"Alunos\":\"\"\r\n}}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7161/api/Cursos",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7161",
+							"path": [
+								"api",
+								"Cursos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
